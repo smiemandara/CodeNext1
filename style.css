@@ -1,0 +1,58 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html{
+    background-color: black;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+    position: fixed;
+    inset: 0;
+    height: 12vh;
+}
+.header .left{
+    display: flex;
+    gap: 2px;
+    color: white;
+}
+.header .left i{
+    color: rgba(185, 139, 10, 0.849);
+}
+.header .middle{
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px;
+}
+.header .middle ul{
+    display: flex;
+    gap: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.header .middle ul li{
+    list-style: none;
+}
+.header .middle ul li a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+.header .right button{
+    height: 35px;
+    width: 100px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(45deg, rgb(191, 191, 204), rgb(61, 45, 1));
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    color: white;
+}
+.header .right button:hover{
+    background: linear-gradient(45deg, rgb(53, 39, 1), rgb(243, 243, 245));
+}
