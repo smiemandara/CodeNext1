@@ -1,12 +1,14 @@
-*{
+* {
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
 }
-html{
+
+html {
     background-image: url(/img/background.png);
 }
-.header{
+
+.header {
     display: flex;
     justify-content: space-between;
     padding: 20px;
@@ -17,31 +19,38 @@ html{
     right: 0;
     height: 12vh;
 }
-.header .left{
+
+.header .left {
     display: flex;
     gap: 2px;
     color: white;
 }
-.header .left i{
+
+.header .left i {
     color: rgba(185, 139, 10, 0.849);
 }
-.header .left h1{
+
+.header .left h1 {
     cursor: pointer;
 }
-.header .middle{
+
+.header .middle {
     border: 1px solid white;
     border-radius: 10px;
     padding: 10px;
 }
-.header .middle ul{
+
+.header .middle ul {
     display: flex;
     gap: 50px;
     margin-left: 5px;
     margin-right: 5px;
 }
-.header .middle ul li{
+
+.header .middle ul li {
     list-style: none;
 }
+
 .header .middle ul li a {
     text-decoration: none;
     color: white;
@@ -49,10 +58,20 @@ html{
     font-weight: bold;
     transition: all 0.3s ease-in-out;
 }
+
 .header .middle ul li a:hover {
     color: rgba(185, 139, 10, 0.849);
 }
-.header .right button{
+
+.header .middle ul li a.active {
+    color: rgba(255, 214, 92, 0.95);
+    background-color: rgba(185, 139, 10, 0.16);
+    border-bottom: 2px solid rgba(255, 214, 92, 0.95);
+    border-radius: 6px;
+    padding: 8px 10px;
+}
+
+.header .right button {
     height: 35px;
     width: 100px;
     border-radius: 10px;
@@ -62,20 +81,24 @@ html{
     transition: all 3ms ease-in-out;
     color: white;
 }
-.header .right button:hover{
+
+.header .right button:hover {
     background: linear-gradient(45deg, rgb(53, 39, 1), rgb(243, 243, 245));
     scale: 1.05;
 }
-#design{
+
+#design {
     border: 1px solid white;
     border-radius: 10px;
     padding: 8px;
     margin-top: 10px;
 }
-#design i{
+
+#design i {
     color: rgba(185, 139, 10, 0.849);
 }
-.main{
+
+.main {
     margin-top: 12vh;
     display: flex;
     flex-direction: column;
@@ -85,68 +108,87 @@ html{
     color: white;
     padding: 6px;
 }
-.main .top{
+
+.main .top {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 650px;
 }
-.top .heading h1{
+
+.top .heading h1 {
     font-size: 3.8em;
     text-align: center;
 }
-.design{
+
+.design {
     color: rgba(185, 139, 10, 0.849);
 }
-.main .top p{
+
+.main .top p {
     font-size: 18px;
     text-align: center;
     width: 500px;
 }
-.middle{
+
+.middle {
     display: flex;
     flex-direction: column;
 }
-.middle .first{
+
+.middle .first {
     margin-top: 30px;
     display: flex;
     gap: 30px;
     align-items: center;
     justify-content: center;
 }
-.middle .first .one, .middle .first .two, .middle .first .three{
+
+.middle .first .one,
+.middle .first .two,
+.middle .first .three {
     border: 1px solid rgb(0, 0, 3);
     width: 350px;
     height: 120px;
     border-radius: 10px;
-    background-color: rgba(3, 1, 27,0.8);
+    background-color: rgba(3, 1, 27, 0.8);
     display: flex;
     text-align: center;
     padding: 10px;
     cursor: pointer;
     transition: 3ms all ease-in-out;
 }
-.middle .first .one:hover, .middle .first .two:hover, .middle .first .three:hover{
+
+.middle .first .one:hover,
+.middle .first .two:hover,
+.middle .first .three:hover {
     scale: 1.05;
 }
-.middle .second{
+
+.middle .second {
     display: flex;
     gap: 30px;
     align-items: center;
     justify-content: center;
     margin-top: 15px;
 }
-.middle .second .four, .middle .second .five, .middle .second .six{
+
+.middle .second .four,
+.middle .second .five,
+.middle .second .six {
     border: 1px solid rgb(0, 0, 3);
     width: 350px;
     height: 120px;
     border-radius: 10px;
-    background-color: rgba(3, 1, 27,0.8);
+    background-color: rgba(3, 1, 27, 0.8);
     display: flex;
     text-align: center;
     padding: 10px;
     cursor: pointer;
 }
-.middle .second .four:hover, .middle .second .five:hover, .middle .second .six:hover{
+
+.middle .second .four:hover,
+.middle .second .five:hover,
+.middle .second .six:hover {
     scale: 1.05;
 }
