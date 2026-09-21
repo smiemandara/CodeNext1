@@ -147,3 +147,6 @@ html{
     padding: 10px;
     cursor: pointer;
 }
+.middle .second .four:hover, .middle .second .five:hover, .middle .second .six:hover{
+    scale: 1.05;
+}
