@@ -8,63 +8,76 @@ html{
 }
 .header{
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: 20px;
+    padding: 16px clamp(20px, 4vw, 56px);
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     height: 12vh;
+    min-height: 76px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(10, 12, 14, 0.35);
+    backdrop-filter: blur(12px);
+    z-index: 2;
+    font-family: "Trebuchet MS", sans-serif;
 }
 .header .left{
     display: flex;
-    gap: 2px;
+    align-items: center;
+    gap: 9px;
     color: white;
 }
 .header .left i{
-    color: rgba(185, 139, 10, 0.849);
+    color: #d5b85a;
 }
 .header .left h1{
+    margin: 0;
+    font-size: 1.25rem;
     cursor: pointer;
 }
 .header .middle{
-    border: 1px solid white;
-    border-radius: 10px;
-    padding: 10px;
+    border: 0;
+    padding: 0;
 }
 .header .middle ul{
     display: flex;
-    gap: 50px;
-    margin-left: 5px;
-    margin-right: 5px;
+    gap: clamp(16px, 3vw, 42px);
+    margin: 0;
+    padding: 0;
 }
 .header .middle ul li{
     list-style: none;
 }
 .header .middle ul li a {
     text-decoration: none;
-    color: white;
+    color: rgba(244, 241, 232, 0.68);
     cursor: pointer;
-    font-weight: bold;
-    transition: all 0.3s ease-in-out;
+    font-size: 0.92rem;
+    transition: color 160ms ease;
 }
-.header .middle ul li a:hover {
-    color: rgba(185, 139, 10, 0.849);
+.header .middle ul li a:hover,
+.header .middle ul li a[aria-current="page"] {
+    color: #d5b85a;
 }
 .header .right button{
-    height: 35px;
-    width: 100px;
-    border-radius: 10px;
-    border: none;
-    background: linear-gradient(45deg, rgb(191, 191, 204), rgb(61, 45, 1));
-    cursor: pointer;
-    transition: all 3ms ease-in-out;
+    min-height: 40px;
+    padding: 0 16px;
+    border: 1px solid rgba(213, 184, 90, 0.6);
+    border-radius: 6px;
+    background: transparent;
     color: white;
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.88rem;
+    transition: background-color 160ms ease, color 160ms ease;
 }
 .header .right button:hover{
-    background: linear-gradient(45deg, rgb(53, 39, 1), rgb(243, 243, 245));
-    scale: 1.05;
+    border-color: #d5b85a;
+    background: #d5b85a;
+    color: #171817;
 }
 #design{
     border: 1px solid white;
