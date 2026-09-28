@@ -6,6 +6,10 @@
 html{
     background-image: url(/img/background.png);
 }
+body{
+    height: 100vh;
+    overflow: hidden;
+}
 .header{
     display: flex;
     justify-content: space-between;
@@ -64,5 +68,170 @@ html{
 }
 .header .right button:hover{
     background: linear-gradient(45deg, rgb(53, 39, 1), rgb(243, 243, 245));
-    scale: 1.05;
+    scale: 1.05 ;
+}
+.main{
+    margin-top: 12vh;
+    height: 88vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+:root{
+    --project-accent: #d5b85a;
+    --project-panel: rgba(15, 18, 22, 0.78);
+    --project-line: rgba(255, 255, 255, 0.16);
+    --project-muted: rgba(255, 255, 255, 0.72);
+}
+.main .top,
+.main .nav,
+.main .middle{
+    width: min(1100px, calc(100% - 48px));
+    margin-left: auto;
+    margin-right: auto;
+}
+.main .top{
+    flex: 0 0 auto;
+    padding-top: clamp(16px, 2.5vh, 28px);
+    margin-bottom: clamp(12px, 2vh, 22px);
+}
+.main .top p{
+    margin-bottom: 12px;
+    color: var(--project-accent);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+.main .top h1{
+    margin-bottom: 14px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 3.2rem;
+    font-weight: 500;
+}
+.main .top span{
+    display: block;
+    max-width: 650px;
+    color: var(--project-muted);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+.main .nav{
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: clamp(12px, 2vh, 22px);
+    padding: 8px;
+    border: 1px solid var(--project-line);
+    border-radius: 8px;
+    background: rgba(10, 12, 15, 0.58);
+}
+.main .nav .left{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.main .nav button{
+    min-height: 38px;
+    padding: 0 15px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    background: transparent;
+    color: var(--project-muted);
+    cursor: pointer;
+    font: inherit;
+    transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+.main .nav .left button:first-child,
+.main .nav button:hover{
+    border-color: rgba(213, 184, 90, 0.45);
+    background: rgba(213, 184, 90, 0.14);
+    color: #f3d979;
+}
+.main .nav input{
+    width: 220px;
+    min-height: 38px;
+    padding: 0 12px;
+    border: 1px solid var(--project-line);
+    border-radius: 6px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.06);
+    color: white;
+    font: inherit;
+}
+.main .nav input::placeholder{
+    color: rgba(255, 255, 255, 0.52);
+}
+.main .nav input:focus{
+    border-color: var(--project-accent);
+}
+.main .middle{
+    flex: 1 1 auto;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: clamp(8px, 1.5vh, 14px);
+    padding-bottom: 10px;
+}
+.main .middle .one,
+.main .middle .two{
+    display: flex;
+    min-height: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    align-items: flex-start;
+    gap: 6px;
+    padding: clamp(12px, 1.8vh, 18px);
+    border: 1px solid var(--project-line);
+    border-radius: 8px;
+    background: var(--project-panel);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.16);
+    transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease;
+}
+.main .middle .one:hover,
+.main .middle .two:hover{
+    transform: translateY(-3px);
+    border-color: rgba(213, 184, 90, 0.62);
+    background: rgba(20, 22, 25, 0.9);
+}
+.main .middle h3{
+    flex: 0 0 100%;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.28rem;
+    font-weight: 500;
+}
+.main .middle span{
+    flex: 0 0 100%;
+    color: var(--project-muted);
+    line-height: 1.6;
+}
+.main .middle .below{
+    flex: 0 0 100%;
+    margin-top: auto;
+}
+.main .middle .one > button,
+.main .middle .two > button{
+    margin-top: 0;
+}
+.main .middle .below{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+.main .middle .one button,
+.main .middle .two button{
+    min-height: 28px;
+    padding: 0 9px;
+    border: 1px solid rgba(213, 184, 90, 0.32);
+    border-radius: 4px;
+    background: rgba(213, 184, 90, 0.1);
+    color: #e8d28b;
+    font: inherit;
+    font-size: 0.75rem;
 }

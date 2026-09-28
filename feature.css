@@ -115,18 +115,21 @@ html{
     justify-content: center;
 }
 .middle .first .one, .middle .first .two, .middle .first .three{
-    border: 1px solid rgb(0, 0, 3);
+    border: 1px solid rgba(255, 255, 255, 0.16);
     width: 350px;
     height: 120px;
     border-radius: 10px;
-    background-color: rgba(3, 1, 27,0.8);
+    background-color: rgba(15, 18, 22, 0.78);
     display: flex;
     text-align: center;
     padding: 10px;
     cursor: pointer;
-    transition: 3ms all ease-in-out;
+    transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease;
 }
 .middle .first .one:hover, .middle .first .two:hover, .middle .first .three:hover{
+    transform: translateY(-3px);
+    border-color: rgba(213, 184, 90, 0.62);
+    background: rgba(20, 22, 25, 0.9);
     scale: 1.05;
 }
 .middle .second{
@@ -137,16 +140,20 @@ html{
     margin-top: 15px;
 }
 .middle .second .four, .middle .second .five, .middle .second .six{
-    border: 1px solid rgb(0, 0, 3);
+    border: 1px solid rgba(255, 255, 255, 0.16);
     width: 350px;
     height: 120px;
     border-radius: 10px;
-    background-color: rgba(3, 1, 27,0.8);
+    background-color: rgba(15, 18, 22, 0.78);
     display: flex;
     text-align: center;
     padding: 10px;
     cursor: pointer;
+    transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease;
 }
 .middle .second .four:hover, .middle .second .five:hover, .middle .second .six:hover{
+     transform: translateY(-3px);
+    border-color: rgba(213, 184, 90, 0.62);
+    background: rgba(20, 22, 25, 0.9);
     scale: 1.05;
 }
